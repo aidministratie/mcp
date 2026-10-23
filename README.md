@@ -1,80 +1,83 @@
-# aidministratie MCP Gateway
+# aidministratie.be // Digitale collega's en AI voor kmo's
 
 [![Protocol](https://img.shields.io/badge/MCP%20Protocol-2024--11--05-blue.svg)](https://modelcontextprotocol.io)
-[![GDPR Sovereign](https://img.shields.io/badge/Data%20Sovereignty-100%25%20EU%20GDPR-emerald.svg)](https://aidministratie.be/privacy/mcp)
+[![Data Sovereignty](https://img.shields.io/badge/Data%20Sovereignty-100%25%20EU%20GDPR-emerald.svg)](https://aidministratie.be/privacy/mcp)
 [![Terms of Service](https://img.shields.io/badge/Terms-MCP%20%26%20API-orange.svg)](https://aidministratie.be/terms/mcp)
 [![Publisher](https://img.shields.io/badge/Publisher-aidministratie.be-black.svg)](https://aidministratie.be)
+[![License](https://img.shields.io/badge/License-MIT-purple.svg)](LICENSE)
 
-Official Model Context Protocol (MCP) Streamable HTTP/SSE Gateway for **[aidministratie.be](https://aidministratie.be)** — Sovereign AI Agent-as-a-Service infrastructure for European SMEs.
-
-Connect Claude, Cursor, Antigravity, or ChatGPT to your private company data room, autonomous workflow workers, and human-in-the-loop task queues with complete multi-tenant cryptographic isolation.
-
----
-
-## 🛡️ Core Guarantees
-
-* **Zero Foundation Model Training:** Your business data, contracts, invoices, and business cards are **never used to train or fine-tune public AI models**.
-* **100% European Hosting:** Hosted entirely within ISO 27001-certified data centers in the EU (Germany & Finland).
-* **AES-256 Envelope KMS Encryption:** Files committed to the Virtual File System (VFS) are encrypted at rest with tenant-isolated keys.
-* **Human-in-the-Loop (HITL):** High-stakes mutations (ERP/CRM changes, outbound emails, filings) are staged in a review queue for explicit human authorization.
+Officiële Model Context Protocol (MCP) Gateway & open-source bridge voor **[aidministratie.be](https://aidministratie.be)**.
 
 ---
 
-## 🛠️ Available MCP Tools
+## 🇧🇪 Wat doet aidministratie.be voor jouw kmo?
 
-| Tool | Description |
-| :--- | :--- |
-| `check_agent_status` | Inspect the real-time health, worker heartbeats, and queue status of your tenant. |
-| `haal_wachtende_taken_op` | Fetch staged administrative actions awaiting human review and approval. |
-| `beoordeel_wachtende_taak` | Approve (`approved`) or reject (`rejected`) a staged mutation with feedback traces. |
-| `trigger_visitekaartjes_scan` | Ingest and OCR business cards directly into your tenant database and CRM. |
-| `trigger_prospectie_scan` | Process conference prospects with multi-image OCR and CRM enrichment. |
-| `list_files` | List files and directories within your encrypted Virtual File System (VFS). |
-| `read_file_content` | Securely retrieve document contents from tenant storage. |
-| `write_file_content` | Commit or update files in your encrypted tenant storage. |
-| `voeg_agent_leermoment_toe` | Record a domain heuristic or prompt adjustment for your autonomous agents. |
+**[aidministratie.be](https://aidministratie.be)** brengt **praktische AI en digitale collega's** naar Vlaamse en Europese kmo's. 
+
+Wij verbinden jouw favoriete AI-apps (zoals Claude, Cursor, ChatGPT of Microsoft 365 Copilot) veilig met meewerkende digitale teamleden voor jouw dagelijkse administratie, **zónder dat jouw vertrouwelijke bedrijfsgegevens ooit gebruikt worden om publieke AI-modellen te trainen**.
+
+### De drie garanties voor jouw onderneming:
+1. **Verlicht jouw administratie:** Routineklussen zoals visitekaartjes inboeken, prospectiesignalen opvolgen en dossiers beheren worden zelfstandig voorbereid door je digitale collega's.
+2. **Jij behoudt altijd de controle (Mens-in-de-lus):** Een digitale collega voert pas een definitieve actie uit (zoals een e-mail of CRM-mutatie) nadat jij een seintje van akkoord hebt gegeven via een eenvoudige goedkeuringswachtrij.
+3. **100% Data-soevereiniteit & GDPR:** Al jouw bestanden en data worden verwerkt en versleuteld (AES-256 KMS) in gecertificeerde Europese datacenters (Duitsland & Finland). Geen ongewenste datadoorgiften naar Amerikaanse servers.
 
 ---
 
-## 🚀 Quickstart & Configuration
+## 👥 Maak kennis met jouw Digitale Collega's
 
-### 1. Claude Desktop (`claude_desktop_config.json`)
-Connect directly via SSE:
+Via het Model Context Protocol (MCP) krijgen jouw AI-assistenten direct toegang tot gespecialiseerde teamleden:
 
+| Digitale Collega | Wat doet deze collega voor jouw kmo? | Onderliggende MCP-tool |
+| :--- | :--- | :--- |
+| 📇 **De Visitekaartjes-collega** | Fotografeert visitekaartjes na een beurs of meeting, extraheert gegevens, valideert het KBO/BTW-nummer en synchroniseert direct naar jouw CRM of Google Sheets. | `trigger_visitekaartjes_scan` |
+| 🎯 **De Prospectie-collega** | Monitort vacatures, aanbestedingen en marktsignalen en bereidt relevante opvolgacties voor jouw verkoopteam voor. | `trigger_prospectie_scan` |
+| 📁 **De Dossier- & Archief-collega** | Beheert jouw versleutelde Virtuele Bestandssysteem (VFS). Zoekt razendsnel documenten op en legt nieuwe versies vast met verplichte audit-verantwoording. | `list_files`<br>`read_file_content`<br>`write_file_content` |
+| 🤝 **De Goedkeurings-assistent** | Zet alle voorgestelde acties netjes voor je klaar in een review-wachtrij, zodat jij met één klik op 'akkoord' de controle behoudt. | `haal_wachtende_taken_op`<br>`beoordeel_wachtende_taak` |
+| 🧠 **Het Lerend Geheugen** | Onthoudt specifieke bedrijfsvoorkeuren en werkinstructies ("stuur offertes voor klant X altijd naar finance@..."). | `voeg_agent_leermoment_toe` |
+| 📊 **De Status-assistent** | Geeft direct inzicht in de live werking en achtergrondtaken van jouw actieve kmo-agents. | `check_agent_status` |
+
+👉 **Meer informatie of een KMO-licentie aanvragen:** [https://aidministratie.be](https://aidministratie.be)  
+👉 **Klantportaal & AI Loket:** [https://loket.aidministratie.be](https://loket.aidministratie.be)
+
+---
+
+## 🚀 Hoe praat jouw AI met je digitale collega's? (Quickstart)
+
+### Optie A: Direct via de Remote Gateway (Aanbevolen)
+
+#### 1. Claude Desktop (`claude_desktop_config.json`)
 ```json
 {
   "mcpServers": {
     "aidministratie": {
-      "url": "https://loket.aidministratie.be/?token=YOUR_TENANT_API_KEY"
+      "url": "https://loket.aidministratie.be/?token=JOUW_TENANT_API_KEY"
     }
   }
 }
 ```
 
-### 2. Cursor (`.cursor/mcp.json`)
-
+#### 2. Cursor (`.cursor/mcp.json`)
 ```json
 {
   "mcpServers": {
     "aidministratie": {
       "url": "https://loket.aidministratie.be",
       "headers": {
-        "Authorization": "Bearer YOUR_TENANT_API_KEY"
+        "x-api-key": "JOUW_TENANT_API_KEY"
       }
     }
   }
 }
 ```
 
-### 3. Google Antigravity (`~/.gemini/antigravity/mcp_config.json`)
-
+#### 3. Google Antigravity (`~/.gemini/antigravity/mcp_config.json`)
 ```json
 {
   "mcpServers": {
     "aidministratie": {
       "serverUrl": "https://loket.aidministratie.be",
       "headers": {
-        "Authorization": "Bearer YOUR_TENANT_API_KEY"
+        "x-api-key": "JOUW_TENANT_API_KEY"
       }
     }
   }
@@ -83,19 +86,43 @@ Connect directly via SSE:
 
 ---
 
-## 🔐 Authentication
+### Optie B: Open-Source Python Stdio Bridge (Voor lokale CLI-omgevingen)
 
-To interact with your tenant gateway, generate a live API Key (`vlw_live_...`) in the [aidministratie Loket](https://loket.aidministratie.be).
+Voor ontwikkelaars die de voorkeur geven aan een lokaal subprocess via stdio:
 
-Credentials can be passed via:
-* **HTTP Header:** `Authorization: Bearer vlw_live_...`
-* **Query Parameter:** `https://loket.aidministratie.be/mcp?token=vlw_live_...`
+```bash
+git clone https://github.com/aidministratie/mcp.git
+cd mcp
+
+python bridge.py --token <JOUW_TENANT_API_KEY>
+```
+
+In `claude_desktop_config.json`:
+```json
+{
+  "mcpServers": {
+    "aidministratie": {
+      "command": "python",
+      "args": ["/pad/naar/mcp/bridge.py", "--token", "JOUW_TENANT_API_KEY"]
+    }
+  }
+}
+```
 
 ---
 
-## 📄 Compliance & Legal
+## 🔐 Veiligheid & Authenticatie
 
-* **Privacy Policy:** [https://aidministratie.be/privacy/mcp](https://aidministratie.be/privacy/mcp)
-* **Terms of Service:** [https://aidministratie.be/terms/mcp](https://aidministratie.be/terms/mcp)
-* **Security & Inquiries:** `privacy@aidministratie.be`
-* **Operated by:** Bram Vanzieleghem / ITeratief (BE 0671.637.106)
+Jouw API-sleutel (`vlw_live_...`) wordt aangemaakt in het beveiligde [aidministratie.be Loket](https://loket.aidministratie.be).
+
+* **HTTP Header:** `x-api-key: vlw_live_...` of `Authorization: Bearer vlw_live_...`
+* **Query Parameter:** `https://loket.aidministratie.be/?token=vlw_live_...`
+
+---
+
+## 📄 Juridische Voorwaarden & Privacy (Belgisch Recht)
+
+* **Privacy Policy (Zero Model Training):** [https://aidministratie.be/privacy/mcp](https://aidministratie.be/privacy/mcp)
+* **Terms of Service (Mens-in-de-lus afspraken):** [https://aidministratie.be/terms/mcp](https://aidministratie.be/terms/mcp)
+* **Website:** [https://aidministratie.be](https://aidministratie.be)
+* **Contact:** Bram Vanzieleghem / ITeratief (BE 0671.637.106) // `bram@aidministratie.be`

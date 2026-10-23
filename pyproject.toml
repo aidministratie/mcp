@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aidministratie-mcp"
+version = "1.0.1"
+description = "aidministratie.be // Digitale collega's en AI voor kmo's - MCP Gateway & Bridge"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "Bram Vanzieleghem", email = "bram@aidministratie.be" }
+]
+keywords = ["mcp", "digitale-collegas", "kmo", "vlaanderen", "belgie", "ai-administratie", "gdpr", "vfs"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Office/Business :: Financial",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://aidministratie.be"
+Gateway = "https://loket.aidministratie.be"
+Repository = "https://github.com/aidministratie/mcp"
+Issues = "https://github.com/aidministratie/mcp/issues"
+Privacy = "https://aidministratie.be/privacy/mcp"
+Terms = "https://aidministratie.be/terms/mcp"
+
+[project.scripts]
+aidministratie-mcp = "bridge:main"
