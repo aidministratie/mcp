@@ -1,0 +1,38 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "aidministratie",
+  "version": "1.0.0",
+  "description": "Digitale collega's en AI voor kmo's. Automatiseer administratie, visitekaartjes en dossiers onder jouw toezicht.",
+  "author": {
+    "name": "aidministratie.be",
+    "email": "bram@aidministratie.be",
+    "url": "https://aidministratie.be"
+  },
+  "homepage": "https://aidministratie.be",
+  "repository": "https://github.com/aidministratie/mcp",
+  "license": "Apache-2.0",
+  "keywords": [
+    "kmo",
+    "administratie",
+    "visitekaartjes",
+    "crm",
+    "mcp",
+    "digitale-collega"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./mcp.json",
+  "extensions": {
+    "com.openai": {
+      "ui": true,
+      "privacy_policy_url": "https://aidministratie.be/privacy/mcp",
+      "terms_of_service_url": "https://aidministratie.be/terms/mcp",
+      "support_url": "https://aidministratie.be/contact",
+      "starter_prompts": [
+        "Welke taken wachten momenteel op mijn goedkeuring?",
+        "Toon de status van mijn actieve digitale collega's.",
+        "Verwerk binnengekomen visitekaartjes met OCR en KBO-verificatie.",
+        "Start een prospectiescan naar kmo-opportuniteiten."
+      ]
+    }
+  }
+}

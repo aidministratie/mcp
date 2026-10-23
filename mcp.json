@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "aidministratie": {
+      "type": "http",
+      "url": "https://loket.aidministratie.be/api/v1/mcp"
+    }
+  }
+}
