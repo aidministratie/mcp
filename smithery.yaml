@@ -1,0 +1,17 @@
+# Smithery.ai Manifest for aidministratie MCP Gateway
+# Specification: https://smithery.ai/docs/config#spec
+startCommand:
+  type: http
+  url: "https://loket.aidministratie.be"
+  headers:
+    Authorization: "Bearer {apiKey}"
+
+configSchema:
+  type: object
+  required:
+    - apiKey
+  properties:
+    apiKey:
+      type: string
+      description: "aidministratie Tenant Live API Key (e.g. vlw_live_aidm_...)"
+      format: password

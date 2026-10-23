@@ -1,0 +1,17 @@
+{
+  "$schema": "https://glama.ai/mcp/manifest.json",
+  "name": "aidministratie MCP",
+  "description": "Sovereign AI Agent gateway & MCP server for European SMEs. Manage pending Human-in-the-Loop tasks, Virtual File System (VFS), business cards, and autonomous workflows.",
+  "homepage": "https://aidministratie.be",
+  "repository": "https://github.com/aidministratie/mcp",
+  "transport": {
+    "type": "http",
+    "url": "https://loket.aidministratie.be"
+  },
+  "authentication": {
+    "type": "bearer",
+    "tokenName": "apiKey"
+  },
+  "privacyPolicyUrl": "https://aidministratie.be/privacy/mcp",
+  "termsOfServiceUrl": "https://aidministratie.be/terms/mcp"
+}
